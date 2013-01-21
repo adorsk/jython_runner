@@ -29,10 +29,9 @@ set JAVA_LIB="%CD%\.lib\java"
 set PYTHON_PATH=
 
 for /R "%CD%\.lib\java" %%a in (*.jar) do (
-    set PYTHON_PATH=!PYTHON_PATH!;%%a
     set CLASSPATH=!CLASSPATH!;%%a
 )
 
 echo starting...
 
-%JYTHON_CMD% -J-Xmx%MAX_MEM% -Dpython.path="%PYTHON_PATH%;%CD%\.lib\python" -m entrypoint
+%JYTHON_CMD% -J-Xmx%MAX_MEM% -Dpython.path="%CD%\.lib\python" -m entrypoint
