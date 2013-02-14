@@ -32,6 +32,7 @@ for /R "%CD%\.lib\java" %%a in (*.jar) do (
     set CLASSPATH=!CLASSPATH!;%%a
 )
 
-echo starting...
+echo starting...this can take a while on windows.
+echo note: on windows you can safely ignore the message 'The system cannot find the file specified'
 
 %JYTHON_CMD% -J-Xmx%MAX_MEM% -Dpython.path="%CD%\.lib\python" -m entrypoint

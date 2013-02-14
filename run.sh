@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "starting..."
+echo "starting...this can take some time to load..."
 
 # -------------------
 # SETTINGS
